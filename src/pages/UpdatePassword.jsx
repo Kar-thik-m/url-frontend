@@ -14,7 +14,7 @@ const UpdatePassword = ({token}) => {
     const handleSubmit =async (e) => {
       e.preventDefault();
      const payload={password,token}
-     console.log("token"+token,"password :"+password)
+     
      const updateResponse=await fetch(`${backendUrl}/updatePassword`,{
       method: "POST",
       body:JSON.stringify(payload),
@@ -23,7 +23,7 @@ const UpdatePassword = ({token}) => {
       }
     })
     const data=await updateResponse.json();
-     console.log(data)
+    
     setPassword('');
     if(updateResponse.status==401){
       alert('still password reset validation failed please try again');

@@ -25,7 +25,7 @@ const UrlRegister = () => {
                 }
             })
             const data=await register.json();
-            console.log(data)
+          
             const smallUrl=data.shortUrl
             if(data){
 

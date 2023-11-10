@@ -21,7 +21,7 @@ const navigate=useNavigate();
       }
     const handleSubmit=async(e)=>{
          e.preventDefault();
-         console.log(formData);
+         
          const loginResponse=await fetch(`${backendUrl}/login`,{
             method: 'POST',
             body:JSON.stringify(formData),
